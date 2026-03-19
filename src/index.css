@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-primary: #041627;
+  --color-primary-container: #1a2b3c;
+  --color-secondary: #006d37;
+  --color-secondary-container: #6bfe9c;
+  --color-tertiary: #001916;
+  --color-tertiary-container: #00302a;
+  --color-surface: #f8f9fa;
+  --color-surface-container: #edeeef;
+  --color-on-surface: #191c1d;
+  --color-on-surface-variant: #44474c;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+  
+  .primary-gradient {
+    background: linear-gradient(135deg, #041627 0%, #1a2b3c 100%);
+  }
+
+  .workflow-line {
+    background: linear-gradient(90deg, #006d37 0%, #6bfe9c 50%, #006d37 100%);
+    background-size: 200% 100%;
+    animation: flow 3s linear infinite;
+  }
+}
+
+@keyframes flow {
+  0% { background-position: 200% 0; }
+  100% { background-position: 0% 0; }
+}
+
+.node-pulse {
+  animation: node-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes node-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
