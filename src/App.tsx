@@ -614,7 +614,7 @@ const Footer = () => (
     <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-8 py-12 w-full max-w-7xl mx-auto">
       <div className="mb-8 md:mb-0">
         <div className="text-lg font-bold text-primary mb-2">The Sovereign Estate</div>
-        <p className="text-on-surface-variant text-sm">© 2024 Sovereign Estate AI. RERA & DPDP Compliant.</p>
+        <p className="text-on-surface-variant text-sm">© 2026 Sovereign Estate AI. RERA & DPDP Compliant.</p>
       </div>
       <div className="flex flex-wrap justify-center gap-6">
         <a className="text-on-surface-variant hover:text-secondary transition-colors text-sm" href="#">Privacy Policy</a>
